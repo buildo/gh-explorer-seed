@@ -4,7 +4,6 @@ import Router from 'react-router';
 import routes from './routes';
 
 import 'buildo-normalize-css';
-import 'buildo-normalize-css/fullscreenApp.css';
 
 import 'react-flexview/lib/flexView.css';
 
