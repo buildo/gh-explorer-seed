@@ -1,6 +1,12 @@
 import React from 'react';
-import Router from 'react-router-transition-context';
+import ReactDOM from 'react-dom';
+import Router from 'react-router';
 import routes from './routes';
+
+import 'buildo-normalize-css';
+import 'buildo-normalize-css/fullscreenApp.css';
+
+import 'react-flexview/lib/flexView.css';
 
 const router = Router.create({
   routes, location: Router.HashLocation
@@ -9,5 +15,5 @@ const router = Router.create({
 const mountNode = document.getElementById('app');
 
 router.run(Handler => {
-  React.render(<Handler router={router} />, mountNode);
+  ReactDOM.render(<Handler router={router} />, mountNode);
 });

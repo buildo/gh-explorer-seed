@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-transition-context';
+import { Route, DefaultRoute } from 'react-router';
 import App from './AppRoute';
 
 class Useless extends React.Component {
@@ -9,8 +9,8 @@ class Useless extends React.Component {
 }
 
 export default (
-  <Route name="main" path="/">
-    <Route name="counter" handler={App} path="counter" />
-    <Route name="useless" handler={Useless} path="useless" />
+  <Route name='main' path='/'>
+    <DefaultRoute name='counter' handler={App} />
+    <Route name='useless' handler={Useless} path='useless' />
   </Route>
 );

@@ -1,12 +1,10 @@
 import React from 'react';
-import Counter from 'components/Counter';
+import Counter from '../components/Counter';
 
 export default class AppRoute extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0
-    };
+
+  state = {
+    counter: 0
   }
 
   componentDidMount() {

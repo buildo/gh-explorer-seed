@@ -1,14 +1,15 @@
 import React from 'react';
-import { props, skinnable, t } from 'revenge';
+import { props, t } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 
+@pure
 @skinnable()
 @props({
   seconds: t.Number
 })
 export default class Counter extends React.Component {
 
-  getLocals() {
-    const seconds = this.props.seconds;
+  getLocals({ seconds }) {
     const minutes = Math.floor(seconds / 60);
     return {
       minutes,
